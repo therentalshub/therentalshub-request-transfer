@@ -182,7 +182,7 @@ function trhrt_register_plugin_scripts()
    $requestJs = 'request-transfer-form';
 
    if (TRHTR_ENVIRONMENT != 'dev') {
-      $requestJs = 'request-form-vRewkNwP';
+      $requestJs = 'request-transfer-form-vRewkNwP';
    }
 
    wp_enqueue_script('therentalshub-request-transfer', plugins_url(TRHTR_PLUGIN_NAME.'/js/'.$requestJs.'.js'), ['jquery', 'flatpickr'], false, ['strategy' => 'defer', 'in_footer' => true]);

@@ -291,7 +291,7 @@ function trhtrProcessRequest($vars)
       'body' => $json
    ]);
 
-   if ((int) $response['response']['code'] != 201) {
+   if ($response['response']['code'] != 201) {
 
       $resultJson = json_decode($response['body'], false);
       return $resultJson !== null ? $resultJson->error : __('An error occured, please try again.', 'trhrt');

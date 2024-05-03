@@ -1,0 +1,154 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: el_GR\n"
+
+#: request-transfer-form.php:4
+msgid "One-way transfer"
+msgstr "Απλή μεταφορά"
+
+#: request-transfer-form.php:5
+msgid "Return transfer"
+msgstr "Μεταφορά με επιστροφή"
+
+#: request-transfer-form.php:15 request-transfer-form.php:68
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: request-transfer-form.php:16 request-transfer-form.php:69
+msgid "Select date"
+msgstr "Επιλέξτε ημερομηνία"
+
+#: request-transfer-form.php:19 request-transfer-form.php:72
+msgid "Time"
+msgstr "Ώρα"
+
+#: request-transfer-form.php:20 request-transfer-form.php:73
+msgid "Select time"
+msgstr "Επιλέξτε ώρα"
+
+#: request-transfer-form.php:23 request-transfer-form.php:76
+msgid "Passengers"
+msgstr "Επιβάτες"
+
+#: request-transfer-form.php:41 request-transfer-form.php:42
+#: request-transfer-form.php:94 request-transfer-form.php:95
+msgid "Pick-up location"
+msgstr "Τοποθεσία παραλαβής"
+
+#: request-transfer-form.php:48 request-transfer-form.php:49
+#: request-transfer-form.php:101 request-transfer-form.php:102
+msgid "Destination"
+msgstr "Προορισμός"
+
+#: request-transfer-form.php:55 request-transfer-form.php:108
+msgid "Flight number or port info"
+msgstr "Αριθμός πτήσης ή στοιχεία λιμανιού"
+
+#: request-transfer-form.php:56 request-transfer-form.php:109
+msgid "Flight number or port/ship info"
+msgstr "Αριθμός πτήσης ή πληροφορίες λιμανιού/πλοίου"
+
+#: request-transfer-form.php:120
+msgid "First name"
+msgstr "Όνομα"
+
+#: request-transfer-form.php:127
+msgid "Last name"
+msgstr "Επίθετο"
+
+#: request-transfer-form.php:134
+msgid "Email address"
+msgstr "Ηλ. διεύθυνση"
+
+#: request-transfer-form.php:141
+msgid "Phone number"
+msgstr "Αριθμός τηλεφώνου"
+
+#: request-transfer-form.php:148
+msgid "Additional notes"
+msgstr "Επιπρόσθετες σημειώσεις"
+
+#: request-transfer-form.php:162
+msgid ""
+"Thank you! Your request has been submitted. We will contact you shortly with "
+"availability. Please check your inbox for our confirmation email."
+msgstr ""
+"Ευχαριστούμε! Το αίτημά σας έχει υποβληθεί. Θα επικοινωνήσουμε μαζί σας "
+"σύντομα για διαθεσιμότητα. Ελέγξτε τα εισερχόμενά σας για το email "
+"επιβεβαίωσης."
+
+#: request-transfer-form.php:169
+msgid "Submit transfer request"
+msgstr "Υποβολή αιτήματος μεταφοράς"
+
+#: therentalshub-request-transfer.php:41
+msgid "TheRentalsHub Transfer Request Form Options"
+msgstr "TheRentalsHub Επιλογές Φόρμας Αιτήματος Μεταφοράς"
+
+#: therentalshub-request-transfer.php:48
+msgid "Send confirmation email"
+msgstr "Αποστολή email επιβεβαίωσης"
+
+#: therentalshub-request-transfer.php:60
+msgid "Send confirmation email to"
+msgstr "Αποστολή email επιβεβαίωσης στο"
+
+#: therentalshub-request-transfer.php:72
+msgid "API key"
+msgstr "Κλειδί API"
+
+#: therentalshub-request-transfer.php:158
+msgid "Settings Saved"
+msgstr "Οι ρυθμίσεις αποθηκεύτηκαν"
+
+#: therentalshub-request-transfer.php:234
+msgid "Request registration is currently not available"
+msgstr "Η αίτηση εγγραφής δεν είναι διαθέσιμη αυτήν τη στιγμή"
+
+#: therentalshub-request-transfer.php:275
+msgid "Missing vars, cannot continue"
+msgstr "Λείπουν μεταβλητές, δεν είναι δυνατή η συνέχεια"
+
+#: therentalshub-request-transfer.php:281
+msgid "Invalid email address provided."
+msgstr "Δόθηκε μη έγκυρη διεύθυνση email."
+
+#: therentalshub-request-transfer.php:306
+msgid "An error occured, please try again."
+msgstr "Παρουσιάστηκε σφάλμα, δοκιμάστε ξανά."
+
+#: therentalshub-request-transfer.php:312
+msgid "Your booking request confirmation"
+msgstr "Επιβεβαίωση του αιτήματος κράτησής σας"
+
+#: therentalshub-request-transfer.php:322
+msgid "New booking request"
+msgstr "Νέα αίτηση κράτησης"
+
+msgid "Setup request form options and connection to your fleet management account"
+msgstr "Ρύθμιση επιλογών φόρμας αιτήματος και σύνδεση με τον λογαριασμό διαχείρισης του στόλου σας"
+
+msgid "Yes"
+msgstr "Ναι"
+
+msgid "No"
+msgstr "Όχι"
+
+msgid "Send a confirmation email with the request details"
+msgstr "Στείλτε ένα email επιβεβαίωσης με τα στοιχεία του αιτήματος"
+
+msgid "You will be notified to this email when a requests is submitted"
+msgstr "Θα ενημερώνεστε σε αυτό το email όταν υποβάλλονται αιτήματα"
+
+msgid "Your fleet management account API key"
+msgstr "Κλειδί API του λογαριασμού διαχείρισης του στόλου σας"

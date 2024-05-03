@@ -1,8 +1,8 @@
 
 <div class="container">
     <div class="trhtr-type-selector d-flex mb-4">
-        <button type="button" class="trhtr-btn trhtr-toggle-type-btn active" data-type="one">One-way transfer</button>
-        <button type="button" class="trhtr-btn trhtr-toggle-type-btn" data-type="return">Return transfer</button>
+        <button type="button" class="trhtr-btn trhtr-toggle-type-btn active" data-type="one"><?=__('One-way transfer', 'therentalshub-request-transfer');?></button>
+        <button type="button" class="trhtr-btn trhtr-toggle-type-btn" data-type="return"><?=__('Return transfer', 'therentalshub-request-transfer');?></button>
     </div>
 
     <div class="trhtr-request-form">
@@ -12,15 +12,15 @@
             <!--begin:One-way fields-->
             <div class="row mb-3">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="trhrft_arv_date">Date <span class="trhtr-required">*</span></label>
-                    <input type="text" class="trhtr-input-control" name="trhrft_arv_date" id="trhrft_arv_date" placeholder="Select date..." required/>
+                    <label for="trhrft_arv_date"><?=__('Date', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                    <input type="text" class="trhtr-input-control" name="trhrft_arv_date" id="trhrft_arv_date" placeholder="<?=__('Select date', 'therentalshub-request-transfer');?>..." required/>
                 </div>
                 <div class="col-sm-3 mb-3 mb-sm-0">
-                    <label for="trhrft_arv_time">Time <span class="trhtr-required">*</span></label>
-                    <input type="text" class="trhtr-input-control" name="trhrft_arv_time" id="trhrft_arv_time" placeholder="Select time..." required/>
+                    <label for="trhrft_arv_time"><?=__('Time', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                    <input type="text" class="trhtr-input-control" name="trhrft_arv_time" id="trhrft_arv_time" placeholder="<?=__('Select time', 'therentalshub-request-transfer');?>..." required/>
                 </div>
                 <div class="col-sm-3">
-                    <label for="trhrft_arv_pax">Passengers <span class="trhtr-required">*</span></label>
+                    <label for="trhrft_arv_pax"><?=__('Passengers', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
                     <select class="trhtr-input-control" name="trhrft_arv_pax" id="trhrft_arv_pax" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -38,22 +38,22 @@
 
             <div class="row mb-3">
                 <div class="col">
-                    <label for="trhrft_arv_from">Pick-up location <span class="trhtr-required">*</span></label>
-                    <input type="text" class="trhtr-input-control" name="trhrft_arv_from" id="trhrft_arv_from" placeholder="Pick-up location" required/>
+                    <label for="trhrft_arv_from"><?=__('Pick-up location', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                    <input type="text" class="trhtr-input-control" name="trhrft_arv_from" id="trhrft_arv_from" placeholder="<?=__('Pick-up location', 'therentalshub-request-transfer');?>" required/>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
-                    <label for="trhrft_arv_to">Destination <span class="trhtr-required">*</span></label>
-                    <input type="text" class="trhtr-input-control" name="trhrft_arv_to" id="trhrft_arv_to" placeholder="Destination" required/>
+                    <label for="trhrft_arv_to"><?=__('Destination', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                    <input type="text" class="trhtr-input-control" name="trhrft_arv_to" id="trhrft_arv_to" placeholder="<?=__('Destination', 'therentalshub-request-transfer');?>" required/>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col">
-                    <label for="trhrft_arv_flight">Flight number or port info</label>
-                    <input type="text" class="trhtr-input-control" name="trhrft_arv_flight" id="trhrft_arv_flight" placeholder="Flight number or port/ship info"/>
+                    <label for="trhrft_arv_flight"><?=__('Flight number or port info', 'therentalshub-request-transfer');?></label>
+                    <input type="text" class="trhtr-input-control" name="trhrft_arv_flight" id="trhrft_arv_flight" placeholder="<?=__('Flight number or port/ship info', 'therentalshub-request-transfer');?>"/>
                 </div>
             </div>
             <!--end:One-way fields-->
@@ -65,15 +65,15 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <label for="trhrft_dpt_date">Date <span class="trhtr-required">*</span></label>
-                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_date" id="trhrft_dpt_date" placeholder="Select date..."/>
+                        <label for="trhrft_dpt_date"><?=__('Date', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_date" id="trhrft_dpt_date" placeholder="<?=__('Select date', 'therentalshub-request-transfer');?>..."/>
                     </div>
                     <div class="col-sm-3 mb-3 mb-sm-0">
-                        <label for="trhrft_dpt_time">Time <span class="trhtr-required">*</span></label>
-                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_time" id="trhrft_dpt_time" placeholder="Select time..."/>
+                        <label for="trhrft_dpt_time"><?=__('Time', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_time" id="trhrft_dpt_time" placeholder="<?=__('Select time', 'therentalshub-request-transfer');?>..."/>
                     </div>
                     <div class="col-sm-3">
-                        <label for="trhrft_dpt_pax">Passengers <span class="trhtr-required">*</span></label>
+                        <label for="trhrft_dpt_pax"><?=__('Passengers', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
                         <select class="trhtr-input-control" name="trhrft_dpt_pax" id="trhrft_dpt_pax">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -91,22 +91,22 @@
 
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="trhrft_dpt_from">Pick-up location <span class="trhtr-required">*</span></label>
-                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_from" id="trhrft_dpt_from" placeholder="Pick-up location"/>
+                        <label for="trhrft_dpt_from"><?=__('Pick-up location', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_from" id="trhrft_dpt_from" placeholder="<?=__('Pick-up location', 'therentalshub-request-transfer');?>"/>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="trhrft_dpt_to">Destination <span class="trhtr-required">*</span></label>
-                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_to" id="trhrft_dpt_to" placeholder="Destination"/>
+                        <label for="trhrft_dpt_to"><?=__('Destination', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
+                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_to" id="trhrft_dpt_to" placeholder="<?=__('Destination', 'therentalshub-request-transfer');?>"/>
                     </div>
                 </div>
 
                 <div class="row mb-4">
                     <div class="col">
-                        <label for="trhrft_dpt_flight">Flight number or port info</label>
-                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_flight" id="trhrft_dpt_flight" placeholder="Flight number or port/ship info"/>
+                        <label for="trhrft_dpt_flight"><?=__('Flight number or port info', 'therentalshub-request-transfer');?></label>
+                        <input type="text" class="trhtr-input-control" name="trhrft_dpt_flight" id="trhrft_dpt_flight" placeholder="<?=__('Flight number or port/ship info', 'therentalshub-request-transfer');?>"/>
                     </div>
                 </div>
 
@@ -117,35 +117,35 @@
 
             <div class="row mb-4">
                 <div class="col">
-                    <label for="trhrft_fname">First name <span class="trhtr-required">*</span></label>
+                    <label for="trhrft_fname"><?=__('First name', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
                     <input type="text" class="trhtr-input-control" name="trhrft_fname" id="trhrft_fname" autocomplete="given-name" required/>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col">
-                    <label for="trhrft_lname">Last name <span class="trhtr-required">*</span></label>
+                    <label for="trhrft_lname"><?=__('Last name', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
                     <input type="text" class="trhtr-input-control" name="trhrft_lname" id="trhrft_lname" autocomplete="family-name" required/>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col">
-                    <label for="trhrft_email">Email address <span class="trhtr-required">*</span></label>
+                    <label for="trhrft_email"><?=__('Email address', 'therentalshub-request-transfer');?> <span class="trhtr-required">*</span></label>
                     <input type="text" class="trhtr-input-control" name="trhrft_email" id="trhrft_email" autocomplete="email" required/>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col">
-                    <label for="trhrft_phone">Phone number</label>
+                    <label for="trhrft_phone"><?=__('Phone number', 'therentalshub-request-transfer');?></label>
                     <input type="text" class="trhtr-input-control" name="trhrft_phone" id="trhrft_phone" autocomplete="tel"/>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col">
-                    <label for="trhrft_notes">Additional notes</label>
+                    <label for="trhrft_notes"><?=__('Additional notes', 'therentalshub-request-transfer');?></label>
                     <textarea class="trhtr-input-control" rows="5" name="trhrft_notes" id="trhrft_notes"></textarea>
                 </div>
             </div>
@@ -159,14 +159,14 @@
             <div class="row mb-4" id="trhtr-request-success-alert" role="alert" style="display:none">
                 <div class="col">
                     <div class="trhtr-alert trhtr-success-alert">
-                        <?=esc_html_e('Thank you! Your request has been submitted. We will contact you shortly with availability. Please check your inbox for our confirmation email.', 'trh');?>
+                        <?=__('Thank you! Your request has been submitted. We will contact you shortly with availability. Please check your inbox for our confirmation email.', 'therentalshub-request-transfer');?>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <button type="submit" class="trhtr-button">Submit transfer request</button>
+                    <button type="submit" class="trhtr-button"><?=__('Submit transfer request', 'therentalshub-request-transfer');?></button>
                 </div>
             </div>
         </form>

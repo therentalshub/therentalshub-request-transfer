@@ -3,7 +3,7 @@
  * Plugin Name: TheRentalsHub Request Transfer
  * Plugin URI: https://www.therentalshub.com
  * Description: Capture transfer requests
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires PHP: 8.0
  * Author: The Rentals Hub
  * License: MIT
@@ -21,6 +21,15 @@ const TRHTR_API_ENDPOINT_DEV = 'http://fleet-haproxy-public:9015/requests/transf
 const TRHTR_API_ENDPOINT_PROD = 'https://web-api.therentalshub.com/requests/transfers';
 
 /**
+ * Translations loading.
+ */
+function trhrt_load_textdomain() {
+	load_plugin_textdomain(TRHTR_PLUGIN_NAME, false, dirname(plugin_basename( __FILE__ )).'/languages'); 
+}
+
+add_action( 'init', 'trhrt_load_textdomain' );
+
+/**
  * Settings.
  */
 function trhrt_settings_init()
@@ -29,14 +38,14 @@ function trhrt_settings_init()
 
    add_settings_section(
       'trhrt_section_req_form_settings',
-      __('TheRentalsHub Transfer Request Form Options', 'trhrt'),
+      __('TheRentalsHub Transfer Request Form Options', 'therentalshub-request-transfer'),
       'trhrt_section_req_form_settings_callback',
       'trhrt'
    );
 
    add_settings_field(
 		'trhrt_send_email',
-      __('Send confirmation email', 'trhrt'),
+      __('Send confirmation email', 'therentalshub-request-transfer'),
 		'trhrt_send_email_cb',
 		'trhrt',
 		'trhrt_section_req_form_settings',
@@ -48,7 +57,7 @@ function trhrt_settings_init()
 
    add_settings_field(
 		'trhrt_notify_email',
-      __('Send confirmation email to', 'trhrt'),
+      __('Send confirmation email to', 'therentalshub-request-transfer'),
 		'trhrt_notify_email_cb',
 		'trhrt',
 		'trhrt_section_req_form_settings',
@@ -60,7 +69,7 @@ function trhrt_settings_init()
 
    add_settings_field(
 		'trhrt_api_key',
-      __('API key', 'trhrt'),
+      __('API key', 'therentalshub-request-transfer'),
 		'trhrt_api_key_cb',
 		'trhrt',
 		'trhrt_section_req_form_settings',
@@ -75,7 +84,7 @@ add_action('admin_init', 'trhrt_settings_init');
 
 function trhrt_section_req_form_settings_callback($args)
 {
-   echo '<p id="'.esc_attr($args['id']).'">'.esc_html_e('Setup request form options and connection to your fleet management account.', 'trhrt').'</p>';
+   echo '<p id="'.esc_attr($args['id']).'">'.esc_html_e('Setup request form options and connection to your fleet management account', 'therentalshub-request-transfer').'.</p>';
 }
 
 function trhrt_send_email_cb($args)
@@ -86,14 +95,14 @@ function trhrt_send_email_cb($args)
 			id="<?php echo esc_attr( $args['label_for'] ); ?>" 
 			name="trhrt_options[<?php echo esc_attr( $args['label_for'] ); ?>]">
 		<option value="yes" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'yes', false ) ) : ( '' ); ?>>
-			<?php esc_html_e('Yes', 'trhrt'); ?>
+			<?php esc_html_e('Yes', 'therentalshub-request-transfer'); ?>
 		</option>
  		<option value="no" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'no', false ) ) : ( '' ); ?>>
-			<?php esc_html_e('No', 'trhrt'); ?>
+			<?php esc_html_e('No', 'therentalshub-request-transfer'); ?>
 		</option>
 	</select>
 	<p class="description">
-		<?php esc_html_e('Send a confirmation email with the request details.', 'trhrt'); ?>
+		<?php esc_html_e('Send a confirmation email with the request details', 'therentalshub-request-transfer'); ?>.
 	</p>
 	<?php
 }
@@ -107,7 +116,7 @@ function trhrt_notify_email_cb($args)
 			name="trhrt_options[<?php echo esc_attr( $args['label_for'] ); ?>]" 
          value="<?=(isset($options[$args['label_for']]) ? $options[$args['label_for']] : '');?>" style="width:350px"/>
 	<p class="description">
-		<?php esc_html_e('You will be notified to this email when a requests is submitted.', 'trhrt' ); ?>
+		<?php esc_html_e('You will be notified to this email when a requests is submitted', 'therentalshub-request-transfer' ); ?>.
 	</p>
 	<?php
 }
@@ -121,7 +130,7 @@ function trhrt_api_key_cb($args)
 			name="trhrt_options[<?php echo esc_attr( $args['label_for'] ); ?>]" 
          value="<?=(isset($options[$args['label_for']]) ? $options[$args['label_for']] : '');?>" style="width:350px"/>
 	<p class="description">
-		<?php esc_html_e('Your fleet management account API key.', 'trhrt' ); ?>
+		<?php esc_html_e('Your fleet management account API key', 'therentalshub-request-transfer' ); ?>.
 	</p>
 	<?php
 }
@@ -146,7 +155,7 @@ function trhrt_options_page_html()
 	}
 
    if (isset($_GET['settings-updated'])) {
-		add_settings_error('trhrt_messages', 'trhrt_message', __('Settings Saved', 'trhrt'), 'updated');
+		add_settings_error('trhrt_messages', 'trhrt_message', __('Settings Saved', 'therentalshub-request-transfer'), 'updated');
 	}
 
    settings_errors('trhrt_messages');
@@ -222,7 +231,7 @@ add_shortcode('trhrt_request_form', 'trhrt_request_form_shortcode');
 function ajax_trhtr_submit_form()
 {
    // generic error
-   $error = __('Request registration is currently not available', 'trhrt');
+   $error = __('Request registration is currently not available', 'therentalshub-request-transfer');
 
    header('Content-Type: application/json', true);
 
@@ -263,13 +272,13 @@ function trhtrProcessRequest($vars)
             || !isset($vars->dpttl) || !isset($vars->dptf) || !isset($vars->fname) 
                || !isset($vars->lname) || !isset($vars->email) || !isset($vars->phone)|| !isset($vars->notes)) {
 
-      return __('Missing vars, cannot continue', 'trhrt');
+      return __('Missing vars, cannot continue', 'therentalshub-request-transfer');
    }
 
    // validate email at least
    if (!preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,6})$/i', $vars->email)) {
       
-      return __('Invalid email address provided.', 'trhrt');
+      return __('Invalid email address provided.', 'therentalshub-request-transfer');
    }
 
    // get needed options
@@ -294,13 +303,13 @@ function trhtrProcessRequest($vars)
    if ($response['response']['code'] != 201) {
 
       $resultJson = json_decode($response['body'], false);
-      return $resultJson !== null ? $resultJson->error : __('An error occured, please try again.', 'trhrt');
+      return $resultJson !== null ? $resultJson->error : __('An error occured, please try again.', 'therentalshub-request-transfer');
    }
 
    // send email to user
    if ($notifyUser == 'yes') {
 
-      wp_mail($vars->email, __('Your booking request confirmation', 'trhrt'), trhtrEmailTemplate($vars), [
+      wp_mail($vars->email, __('Your booking request confirmation', 'therentalshub-request-transfer'), trhtrEmailTemplate($vars), [
          'Content-Type: text/html; charset=UTF-8'
       ]);
    }
@@ -310,7 +319,7 @@ function trhtrProcessRequest($vars)
 
       if (preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,6})$/i', $notifyEmail)) {
 
-         wp_mail($notifyEmail, __('New booking request', 'trhrt'), trhtrEmailTemplateAdmin($vars), [
+         wp_mail($notifyEmail, __('New booking request', 'therentalshub-request-transfer'), trhtrEmailTemplateAdmin($vars), [
             'Content-Type: text/html; charset=UTF-8'
          ]);
       }

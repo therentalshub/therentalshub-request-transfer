@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+
+#: request-transfer-form.php:4
+msgid "One-way transfer"
+msgstr ""
+
+#: request-transfer-form.php:5
+msgid "Return transfer"
+msgstr ""
+
+#: request-transfer-form.php:15 request-transfer-form.php:68
+msgid "Date"
+msgstr ""
+
+#: request-transfer-form.php:16 request-transfer-form.php:69
+msgid "Select date"
+msgstr ""
+
+#: request-transfer-form.php:19 request-transfer-form.php:72
+msgid "Time"
+msgstr ""
+
+#: request-transfer-form.php:20 request-transfer-form.php:73
+msgid "Select time"
+msgstr ""
+
+#: request-transfer-form.php:23 request-transfer-form.php:76
+msgid "Passengers"
+msgstr ""
+
+#: request-transfer-form.php:41 request-transfer-form.php:42
+#: request-transfer-form.php:94 request-transfer-form.php:95
+msgid "Pick-up location"
+msgstr ""
+
+#: request-transfer-form.php:48 request-transfer-form.php:49
+#: request-transfer-form.php:101 request-transfer-form.php:102
+msgid "Destination"
+msgstr ""
+
+#: request-transfer-form.php:55 request-transfer-form.php:108
+msgid "Flight number or port info"
+msgstr ""
+
+#: request-transfer-form.php:56 request-transfer-form.php:109
+msgid "Flight number or port/ship info"
+msgstr ""
+
+#: request-transfer-form.php:120
+msgid "First name"
+msgstr ""
+
+#: request-transfer-form.php:127
+msgid "Last name"
+msgstr ""
+
+#: request-transfer-form.php:134
+msgid "Email address"
+msgstr ""
+
+#: request-transfer-form.php:141
+msgid "Phone number"
+msgstr ""
+
+#: request-transfer-form.php:148
+msgid "Additional notes"
+msgstr ""
+
+#: request-transfer-form.php:162
+msgid ""
+"Thank you! Your request has been submitted. We will contact you shortly with "
+"availability. Please check your inbox for our confirmation email."
+msgstr ""
+
+#: request-transfer-form.php:169
+msgid "Submit transfer request"
+msgstr ""
+
+#: therentalshub-request-transfer.php:41
+msgid "TheRentalsHub Transfer Request Form Options"
+msgstr ""
+
+#: therentalshub-request-transfer.php:48
+msgid "Send confirmation email"
+msgstr ""
+
+#: therentalshub-request-transfer.php:60
+msgid "Send confirmation email to"
+msgstr ""
+
+#: therentalshub-request-transfer.php:72
+msgid "API key"
+msgstr ""
+
+#: therentalshub-request-transfer.php:158
+msgid "Settings Saved"
+msgstr ""
+
+#: therentalshub-request-transfer.php:234
+msgid "Request registration is currently not available"
+msgstr ""
+
+#: therentalshub-request-transfer.php:275
+msgid "Missing vars, cannot continue"
+msgstr ""
+
+#: therentalshub-request-transfer.php:281
+msgid "Invalid email address provided."
+msgstr ""
+
+#: therentalshub-request-transfer.php:306
+msgid "An error occured, please try again."
+msgstr ""
+
+#: therentalshub-request-transfer.php:312
+msgid "Your booking request confirmation"
+msgstr ""
+
+#: therentalshub-request-transfer.php:322
+msgid "New booking request"
+msgstr ""
+
+msgid "Setup request form options and connection to your fleet management account"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Send a confirmation email with the request details"
+msgstr ""
+
+msgid "You will be notified to this email when a requests is submitted"
+msgstr ""
+
+msgid "Your fleet management account API key"
+msgstr ""

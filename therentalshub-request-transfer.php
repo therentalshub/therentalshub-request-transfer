@@ -3,7 +3,7 @@
  * Plugin Name: TheRentalsHub Request Transfer
  * Plugin URI: https://www.therentalshub.com
  * Description: Capture transfer requests
- * Version: 1.0.2
+ * Version: 1.0.3
  * Requires PHP: 8.0
  * Author: The Rentals Hub
  * License: MIT
@@ -17,7 +17,7 @@
 const TRHTR_ENVIRONMENT = 'prod';
 const TRHTR_PLUGIN_NAME = 'therentalshub-request-transfer';
 const TRHTR_NONCE_CONTEXT = 'mcEwPctRkT';
-const TRHTR_API_ENDPOINT_DEV = 'http://fleet-haproxy-public:9015/requests/transfers';
+const TRHTR_API_ENDPOINT_DEV = 'http://web-api.vpn.therentalshub.com/requests/transfers';
 const TRHTR_API_ENDPOINT_PROD = 'https://web-api.therentalshub.com/requests/transfers';
 
 /**
@@ -295,7 +295,7 @@ function trhtrProcessRequest($vars)
    $response = wp_remote_post((TRHTR_ENVIRONMENT == 'dev' ? TRHTR_API_ENDPOINT_DEV : TRHTR_API_ENDPOINT_PROD), [
       'headers' => [
          'Content-Type' => 'application/json',
-         'X-Api-Key' => $apiKey
+         'X-Tenant-Key' => $apiKey
       ],
       'body' => $json
    ]);

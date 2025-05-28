@@ -3,7 +3,7 @@
  * Plugin Name: TheRentalsHub Request Transfer
  * Plugin URI: https://www.therentalshub.com
  * Description: Capture transfer requests
- * Version: 1.0.3
+ * Version: 1.0.4
  * Requires PHP: 8.0
  * Author: The Rentals Hub
  * License: MIT
@@ -320,7 +320,8 @@ function trhtrProcessRequest($vars)
       if (preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,6})$/i', $notifyEmail)) {
 
          wp_mail($notifyEmail, __('New booking request', 'therentalshub-request-transfer'), trhtrEmailTemplateAdmin($vars), [
-            'Content-Type: text/html; charset=UTF-8'
+            'Content-Type: text/html; charset=UTF-8',
+            'Reply-To: '.trim(strip_tags($vars->fname)).' '.trim(strip_tags($vars->lname)).' <'.$vars->email.'>'
          ]);
       }
    }
